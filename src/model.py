@@ -4,8 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 
-dataset_url = "https://raw.githubusercontent.com/Humaid-Mohiuddin/Disease-Symptoms-and-Patient-Profile-Project/master/Disease_symptom_and_patient_profile_dataset.csv"
-df = pd.read_csv(dataset_url)
+df = pd.read_csv("../disease_symptoms_and_patient_profile_dataset.csv")
 
 # Creating a dictionary to store the encoders
 encoders = {}

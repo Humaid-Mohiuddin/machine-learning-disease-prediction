@@ -28,10 +28,9 @@ label {
 }
 
 .radio-group {
-    /* display: flex; */
+    display: flex;
     justify-content: space-around;
     margin: 10px;
-
 }
 
 .radio-group,
@@ -72,10 +71,17 @@ button[type="submit"]:hover {
 }
 
 #prediction-result {
-    margin: 10px;
+    margin: 20px auto;
+    padding: 15px;
     text-align: center;
     font-size: 28px;
     font-weight: bold;
+    background-color: #e8f5e8;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    max-width: 400px;
 }
 
 button#theme-toggle {
@@ -96,6 +102,12 @@ button#theme-toggle:hover {
 
 .dark-theme .container {
     background-color: #14001e;
+}
+
+.dark-theme #prediction-result {
+    background-color: #2e2e2e;
+    border-color: #666;
+    color: #c8e6c9;
 }
 
 .dark-theme input[type=number],
