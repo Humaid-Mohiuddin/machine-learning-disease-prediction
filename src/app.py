@@ -1,15 +1,20 @@
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
+from pathlib import Path
 import pickle
+
+BASE_DIR = Path(__file__).resolve().parent
 
 # Creating flask app
 app = Flask(__name__)
 
 # Loading the pickle model
-model = pickle.load(open("model.pkl", "rb"))
+model_path = BASE_DIR / "model.pkl"
+model = pickle.load(open(model_path, "rb"))
 
 # Loading the pickle encoders
-encoders = pickle.load(open("encoders.pkl", "rb"))
+encoders_path = BASE_DIR / "encoders.pkl"
+encoders = pickle.load(open(encoders_path, "rb"))
 
 @app.route('/')
 def home():
